@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add 1 take 2'),
+        title: const Text('Counter list'),
       ),
       bottomNavigationBar: SizedBox(
         height: 60,
@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
             const VerticalDivider(),
             Expanded(
               child: ElevatedButton(
+                key: const Key('add_button'),
                 onPressed: () {
                   context.read<CounterTrackerModel>().count();
                 },
